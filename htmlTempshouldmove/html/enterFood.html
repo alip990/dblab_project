@@ -1,0 +1,68 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/enterFood.css">
+  <script type="text/javascript" src="../js/enterFoodName.js"></script>
+
+  <title>Document</title>
+</head>
+<body>
+  <form method="post" action="{{ route('FoodController.create') }}"  name="food" onsubmit="return validateForm()" id="foodForm">
+    <div id="food-type-screen">
+      <div class="title">
+        <h1>ثبت غذا</h1>
+      </div>
+      
+      <div class="food-name">
+        <label for="name" class="labels">نام غذا</label>
+        <input type="text" id="name" class="food-field" minlength="4" name="name" placeholder="نام غذا">
+      </div>
+      @if(hasErrorFor('name'))
+      <span>
+          {{ getErrorFor('name') }}
+      </span>
+      @endif
+
+      <div class="food-name">
+        <label for="categoryName" class="labels">نوع غذا</label>
+        <input type="text" id="categoryName" class="food-field" name="categoryName" placeholder="نوع غذا">
+      </div>
+      @if(hasErrorFor('categoryName'))
+      <span>
+          {{ getErrorFor('categoryName') }}
+      </span>
+      @endif
+      <div class="food-name">
+        <label for="price" class="labels">قیمت غذا</label>
+        <div style="display:flex;"><input type="number" id="price" class="food-field" name="price" placeholder="قیمت">
+        <p>ریال</p></div>
+      </div>
+      @if(hasErrorFor('price'))
+      <span>
+          {{ getErrorFor('price') }}
+      </span>
+      @endif
+      <div id="enter-food-screen">
+        <label for="food_img" class="labels">انتخاب عکس:</label>
+        <input type="file" id="food_img" name="food_img" accept="image/*">
+      </div>
+
+      <div class="desciption">
+        <label for="description">توضیحات</label>
+        <textarea rows="4" cols="50" maxlength="200" name="description" id="description"></textarea>
+        @if(hasErrorFor('description'))
+        <span>
+            {{ getErrorFor('description') }}
+        </span>
+        @endif
+      </div><div class="control-group">
+        <input type="submit" class="food-btn" value="ذخیره">
+      </div>
+      
+      
+    </div>
+  </form>
+
+
+</body></html>

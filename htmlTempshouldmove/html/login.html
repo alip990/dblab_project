@@ -1,0 +1,50 @@
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./asset/css/login.css" />
+    <title>Document</title>
+  </head>
+  <body dir="rtl">
+    <form class="login" action="{{ route('UserController.login') }}" method="POST">
+      <div class="login-screen">
+        <div class="app-title">
+          <h1>ورود</h1>
+        </div>
+        <div class="login-form">
+          <div class="logins">
+            <input
+              type="email"
+              placeholder="ایمیل"
+              name="email"
+              class="login-field"
+              value ="{{ old('email', '') }}"
+              required
+            />
+            @if(hasErrorFor('email'))
+            <span>
+                {{ getErrorFor('email') }}
+            </span>
+            @endif
+            <input
+              type="password"
+              placeholder="رمز عبور"
+              name="password"
+              class="login-field"
+              required
+            />
+            @if(hasErrorFor('password'))
+            <span>
+                {{ getErrorFor('password') }}
+            </span>
+            @endif
+
+          </div>
+
+          <input type="submit" class="login-btn" value="ورود" />
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

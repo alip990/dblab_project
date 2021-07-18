@@ -1,0 +1,127 @@
+body {
+  background-color: #f8f8f8;
+  font-family: Shabnam;
+  direction: rtl;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+#food-type-screen {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  width: 430px;
+  border-radius: 19px;
+  box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 6%);
+}
+
+.food-field {
+  display: block;
+  margin: 10px;
+  border-radius: 12px;
+  padding: 10px 0px;
+  text-align: center;
+  background-color: #ecf0f1;
+  border: 5px solid #ecf0f1;
+  font-size: 15px;
+  font-family: Shabnam;
+  width: 100%;
+  transition: border 0.5s;
+  border: 2px solid transparent;
+}
+/* .food-field:focus {
+
+} */
+
+.title {
+  text-align: center;
+  color: #666464;
+}
+.title h1 {
+  font-size: 20px;
+}
+#food-description {
+  border-radius: 10px;
+  border: 1px solid #adadad;
+  display: block;
+  margin-top: 10px;
+}
+}
+
+#img {
+  margin-top: 10px;
+  display: block;
+}
+textarea {
+  resize: vertical;
+}
+.food-name {
+  margin-top: 15px;
+  width: 90%;
+}
+.food-btn {
+  border: 2px solid transparent;
+  background: #005aff;
+  font-size: 15px;
+  color: white;
+  font-family: Shabnam;
+  cursor: pointer;
+  line-height: 25px;
+  padding: 10px 57px;
+  border-radius: 5px;
+  transition: 0.25s;
+  display: block;
+  margin: 10px;
+  transition: 0.25s;
+}
+.food-btn:hover {
+  background-color: #0047ca;
+}
+@media screen and (max-width: 400px) {
+  #food-type-screen {
+    margin: 20px;
+    width: 300px;
+  }
+  textarea {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 296px) {
+  #food-type-screen {
+    width: 260px;
+  }
+  textarea {
+    width: 200px;
+  }
+}
+
+@media screen and (max-height: 470px) {
+  #food-type-screen {
+    padding: 10px;
+  }
+  textarea {
+    width: 200px;
+  }
+}
+
+.invalid-field {
+  border: 1px solid #ff0000;
+}
+
+#enter-food-screen{
+  margin: 25px 0px;
+}
+
+.control-group{
+  margin-top: 10px;
+}
